@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #03a9f4, #009688);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  position: relative;
+}
+
+.side {
+  background: linear-gradient(to left, #014d6f, #003935);
+  width: calc(100% - 30vw);
+  height: calc(100% - 30vh);
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  overflow-x: hidden;
+  transform: translate(-50%, -50%);
+  border-radius: 0 0 0 50%;
+  box-shadow: 0 0 0 8px #00000024, 1px 1px 10px #0000003b;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  transition: all ease-in-out 0.3s;
+}
+
+.side:hover {
+  box-shadow: 0 0 0 8px #03a9f447, 1px 1px 10px #000000;
+}
+
+.side img {
+  width: 50%;
+  height: 100%;
+}
+
+.side p {
+  line-height: 1.6;
+  font-size: 13px;
+  padding: 1rem;
+  color: #ffffffba;
+}
+
+.side button {
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 1em 2em;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+.side button.back {
+  background-color: #eeee;
+  color: #000;
+}
+
+.side button.back:hover {
+  background-color: #009688;
+  color: #fff;
+}
+
+.side button:hover {
+  background-color: #003935;
+  border-radius: 0 0 50% 0;
+}
+
+.side.pop {
+  left: 50%;
+}
+
+@media (max-width: 767px) {
+  .side {
+    flex-direction: column;
+    padding-top: 13em;
+  }
+  .side img {
+    width: 100%;
+    height: auto;
+  }
+  .side p {
+    padding: 0 3rem;
+  }
+  .side button {
+    font-size: 0.8em;
+  }
+  .side div {
+    margin-bottom: 1em;
+  }
+}
